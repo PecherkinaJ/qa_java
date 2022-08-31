@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="CatTest" time="1.519" errors="0" skipped="0">
+<testsuite tests="12" failures="0" name="LionTest" time="0.003" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2022.1.3"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -64,7 +64,16 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="CatTest" name="testGetSoundArrr" time="1.518"/>
-  <testcase classname="CatTest" name="testGetSoundMeow" time="0"/>
-  <testcase classname="CatTest" name="testGetFood" time="0.001"/>
+  <testcase classname="LionTest" name="testLionConstructorEmptySexShouldBeException" time="0.002"/>
+  <testcase classname="LionTest" name="testLionConstructorSymbolsInsteadOfSexShouldBeException" time="0"/>
+  <testcase classname="LionTest" name="testLionConstructorCorrectFemaleSex" time="0"/>
+  <testcase classname="LionTest" name="testEatMeatFemale" time="0"/>
+  <testcase classname="LionTest" name="testDoesHaveManeTrue" time="0"/>
+  <testcase classname="LionTest" name="testGetKittensMale" time="0"/>
+  <testcase classname="LionTest" name="testGetKittensFemale" time="0"/>
+  <testcase classname="LionTest" name="testLionConstructorUndefineSexShouldBeException" time="0"/>
+  <testcase classname="LionTest" name="testDoesHaveManeFalse" time="0"/>
+  <testcase classname="LionTest" name="testEatMeatMale" time="0"/>
+  <testcase classname="LionTest" name="testEatMeatFemaleException" time="0"/>
+  <testcase classname="LionTest" name="testLionConstructorCorrectMaleSex" time="0.001"/>
 </testsuite>

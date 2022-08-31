@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="CatTest" time="1.519" errors="0" skipped="0">
+<testsuite tests="4" failures="0" name="FelineParametrizedTest" time="0.001" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2022.1.3"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -64,7 +64,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="CatTest" name="testGetSoundArrr" time="1.518"/>
-  <testcase classname="CatTest" name="testGetSoundMeow" time="0"/>
-  <testcase classname="CatTest" name="testGetFood" time="0.001"/>
+  <testcase classname="FelineParametrizedTest" name="testGetKittens[0]" time="0"/>
+  <testcase classname="FelineParametrizedTest" name="testGetKittens[1]" time="0"/>
+  <testcase classname="FelineParametrizedTest" name="testGetKittens[2]" time="0"/>
+  <testcase classname="FelineParametrizedTest" name="testGetKittens[3]" time="0.001"/>
 </testsuite>

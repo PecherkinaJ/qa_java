@@ -1,5 +1,5 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-coverage,default,Animal,27,0,4,0,7,0,5,0,3,0
-coverage,default,Feline,15,0,0,0,5,0,5,0,5,0
+coverage,default,Animal,2,25,0,4,1,6,1,4,1,2
+coverage,default,Feline,0,15,0,0,0,5,0,5,0,5
 coverage,default,Cat,0,12,0,0,0,5,0,3,0,3
-coverage,default,Lion,39,0,4,0,11,0,6,0,4,0
+coverage,default,Lion,0,39,0,4,0,11,0,6,0,4
