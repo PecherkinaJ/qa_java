@@ -11,12 +11,13 @@ import static org.junit.Assert.*;
 public class LionTest {
 
     @Test
-    public void testLionConstructorCorrectMaleSex() throws Exception{
+    public void testLionConstructorCorrectMaleSex() throws Exception {
         Lion lion = new Lion(new Feline(), "Самец");
         assertTrue(lion.hasMane);
     }
+
     @Test
-    public void testLionConstructorCorrectFemaleSex() throws Exception{
+    public void testLionConstructorCorrectFemaleSex() throws Exception {
         Lion lion = new Lion(new Feline(), "Самка");
         assertFalse(lion.hasMane);
     }
@@ -25,7 +26,7 @@ public class LionTest {
     public void testLionConstructorEmptySexShouldBeException() throws Exception {
         try {
             new Lion(new Feline(), "");
-        } catch (Exception e){
+        } catch (Exception e) {
             assertTrue(e.getMessage().contains("Используйте допустимые значения пола животного - самец или самка"));
         }
     }
@@ -38,6 +39,7 @@ public class LionTest {
             assertTrue(e.getMessage().contains("Используйте допустимые значения пола животного - самец или самка"));
         }
     }
+
     @Test
     public void testLionConstructorSymbolsInsteadOfSexShouldBeException() throws Exception {
         try {
@@ -48,49 +50,49 @@ public class LionTest {
     }
 
     @Test
-    public void testDoesHaveManeTrue() throws Exception{
+    public void testDoesHaveManeTrue() throws Exception {
         Lion lion = new Lion(new Feline(), "Самец");
         assertTrue(lion.doesHaveMane());
     }
 
     @Test
-    public void testDoesHaveManeFalse() throws Exception{
+    public void testDoesHaveManeFalse() throws Exception {
         Lion lion = new Lion(new Feline(), "Самка");
         assertFalse(lion.doesHaveMane());
     }
 
     @Test
-    public void testGetKittensMale() throws Exception{
+    public void testGetKittensMale() throws Exception {
         Lion lion = new Lion(new Feline(), "Самец");
         assertEquals(1, lion.getKittens());
     }
 
     @Test
-    public void testGetKittensFemale()throws Exception{
+    public void testGetKittensFemale() throws Exception {
         Lion lion = new Lion(new Feline(), "Самка");
         assertEquals(1, lion.getKittens());
     }
 
     @Test
-    public void testEatMeatMale() throws Exception{
+    public void testEatMeatMale() throws Exception {
         Feline feline = new Feline();
         Lion lion = new Lion(feline, "Самец");
         assertEquals(List.of("Животные", "Птицы", "Рыба"), lion.getFood());
     }
 
     @Test
-    public void testEatMeatFemale() throws Exception{
+    public void testEatMeatFemale() throws Exception {
         Feline feline = new Feline();
         Lion lion = new Lion(feline, "Самка");
         assertEquals(List.of("Животные", "Птицы", "Рыба"), lion.getFood());
     }
 
-    @Test (expected = Exception.class)
-    public void testEatMeatFemaleException() throws Exception{
+    @Test(expected = Exception.class)
+    public void testEatMeatFemaleException() throws Exception {
         Feline feline = new Feline();
         try {
             new Lion(feline, "Животное");
-        } catch (Exception e){
+        } catch (Exception e) {
             throw new Exception(e);
         }
     }

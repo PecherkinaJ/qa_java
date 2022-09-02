@@ -7,18 +7,18 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class FelineParametrizedTest {
-     Feline feline = new Feline();
+    Feline feline = new Feline();
 
     private final int kittenNumber;
     private final int expected;
 
-    public FelineParametrizedTest(int kittenNumber, int expected){
+    public FelineParametrizedTest(int kittenNumber, int expected) {
         this.kittenNumber = kittenNumber;
         this.expected = expected;
     }
 
-    @Parameterized.Parameters
-    public static Object[] data(){
+    @Parameterized.Parameters(name = "Тестовые данные: ожидается: {0}, результат: {1}")
+    public static Object[] data() {
         return new Object[][]{
                 {-1, -1},
                 {0, 0},

@@ -16,14 +16,14 @@ public class CatTest {
     Cat mockedCat;
 
     @Test
-    public void testGetSoundMeow(){
+    public void testGetSoundMeow() {
         Cat cat = new Cat(feline);
         String actual = cat.getSound();
         assertEquals("Мяу", actual);
     }
 
     @Test
-    public void testGetSoundArrr(){
+    public void testGetSoundArrr() {
         Mockito.when(mockedCat.getSound()).thenReturn("Аррр");
         String actual = mockedCat.getSound();
         assertEquals("Аррр", actual);

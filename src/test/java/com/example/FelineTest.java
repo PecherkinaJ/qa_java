@@ -15,19 +15,19 @@ public class FelineTest {
     Feline feline;
 
     @Test
-    public void testGetKittens(){
+    public void testGetKittens() {
         Mockito.when(feline.getKittens()).thenReturn(5);
         assertEquals(5, feline.getKittens());
     }
 
     @Test
-    public void testGetFamily(){
+    public void testGetFamily() {
         Mockito.when(feline.getFamily()).thenReturn("Куньи");
         assertEquals("Куньи", feline.getFamily());
     }
 
     @Test
-    public void testEatMeatRealObjectShouldBeHerbivorousFood() throws Exception{
+    public void testEatMeatRealObjectShouldBeHerbivorousFood() throws Exception {
         Feline realFeline = new Feline();
         Feline spyFeline = Mockito.spy(realFeline);
         Mockito.when(spyFeline.getFood("Травоядное")).thenReturn(List.of("Трава", "Различные растения"));
@@ -35,15 +35,15 @@ public class FelineTest {
     }
 
     @Test
-    public void testEatMeatRealObjectShouldBePredatorFood() throws Exception{
+    public void testEatMeatRealObjectShouldBePredatorFood() throws Exception {
         Feline realFeline = new Feline();
         Feline spyFeline = Mockito.spy(realFeline);
         Mockito.when(spyFeline.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
         assertEquals(List.of("Животные", "Птицы", "Рыба"), spyFeline.getFood("Хищник"));
     }
 
-    @Test (expected = Exception.class)
-    public void testEatMeatRealObjectShouldBeException() throws Exception{
+    @Test(expected = Exception.class)
+    public void testEatMeatRealObjectShouldBeException() throws Exception {
         Feline realFeline = new Feline();
         Feline spyFeline = Mockito.spy(realFeline);
         try {
@@ -55,25 +55,25 @@ public class FelineTest {
 
 
     @Test
-    public void testGetKittensShouldBeOne(){
+    public void testGetKittensShouldBeOne() {
         Feline curFeline = new Feline();
         assertEquals(1, curFeline.getKittens());
     }
 
     @Test
-    public void testGetKittensShouldBeTwo(){
+    public void testGetKittensShouldBeTwo() {
         Feline curFeline = new Feline();
         assertEquals(2, curFeline.getKittens(2));
     }
 
     @Test
-    public void testGetFamilyRealObject(){
+    public void testGetFamilyRealObject() {
         Feline curFeline = new Feline();
         assertEquals("Кошачьи", curFeline.getFamily());
     }
 
     @Test
-    public void testEatMeatRealObject() throws Exception{
+    public void testEatMeatRealObject() throws Exception {
         Feline curFeline = new Feline();
         assertEquals(List.of("Животные", "Птицы", "Рыба"), curFeline.eatMeat());
     }
